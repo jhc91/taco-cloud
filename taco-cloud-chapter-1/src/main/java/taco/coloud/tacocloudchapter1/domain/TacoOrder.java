@@ -1,19 +1,33 @@
 package taco.coloud.tacocloudchapter1.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.hibernate.validator.constraints.CreditCardNumber;
+
+import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
-
-import org.hibernate.validator.constraints.CreditCardNumber;
-
-import java.util.List;
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
-import lombok.Data;
-import taco.coloud.tacocloudchapter1.domain.Taco;
+@Data //  默认有参构造函数
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor //   JPA 要求实体有一个无参构造函数
+public class TacoOrder implements Serializable {
 
-@Data
-public class TacoOrder {
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    private Date placedAt;
 
     @NotBlank(message = "Delivery name is required")
     private String deliveryName;
@@ -40,6 +54,8 @@ public class TacoOrder {
     @Digits(integer = 3, fraction = 0, message = "Invalid CVV")
     private String ccCVV;
 
+    //  级联关系
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Taco> tacos = new ArrayList<>();
 
     public void addTaco(Taco taco) {
