@@ -1,10 +1,10 @@
 server:
   port: 80
-
-# 默认情况下，数据库名称是随机生成的。但这使得很难确定数据库连接 URL
 spring:
   application:
-    name: taco-cloud-chapter-1
-  datasource:
-    generate-unique-name: false
-    name: tacocloud
+    name: taco_cloud
+  data:
+    cassandra:
+      keyspace-name: taco_cloud
+      schema-action: recreate_drop_unused
+      local-datacenter: datacenter1

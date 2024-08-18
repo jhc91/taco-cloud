@@ -1,13 +1,12 @@
-package taco.coloud.tacocloudchapter1.domain;
+package domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.hibernate.validator.constraints.CreditCardNumber;
+import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -25,7 +24,6 @@ public class TacoOrder implements Serializable {
 
     private Date placedAt;
 
-    @NotBlank(message = "Delivery name is required")
     private String deliveryName;
 
     @NotBlank(message = "Street is required")

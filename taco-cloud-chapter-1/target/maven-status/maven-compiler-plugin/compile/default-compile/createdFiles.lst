@@ -1,0 +1,13 @@
+taco\coloud\tacocloudchapter1\domain\Ingredient$Type.class
+taco\coloud\tacocloudchapter1\domain\TacoOrder.class
+taco\coloud\tacocloudchapter1\web\controller\standard\OrderController.class
+taco\coloud\tacocloudchapter1\web\controller\standard\DesignTacoController.class
+taco\coloud\tacocloudchapter1\repository\spring\data\jdbc\IngredientRepository.class
+taco\coloud\tacocloudchapter1\repository\spring\data\jdbc\OrderRepository.class
+taco\coloud\tacocloudchapter1\domain\IngredientRef.class
+taco\coloud\tacocloudchapter1\domain\Ingredient.class
+taco\coloud\tacocloudchapter1\TacoCloudChapter1Application.class
+taco\coloud\tacocloudchapter1\framework\config\WebConfig.class
+taco\coloud\tacocloudchapter1\framework\convert\IngredientByIdConverter.class
+taco\coloud\tacocloudchapter1\domain\Taco.class
+taco\coloud\tacocloudchapter1\web\controller\simple\HomeController.class

@@ -1,4 +1,4 @@
-package taco.coloud.tacocloudchapter1.domain;
+package domain;
 
 import lombok.Data;
 

@@ -1,10 +1,10 @@
-package taco.coloud.tacocloudchapter1.framework.convert;
+package framework.convert;
 
+import domain.Ingredient;
+import jdbc.IngredientRepository;
 import lombok.Data;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
-import taco.coloud.tacocloudchapter1.domain.Ingredient;
-import taco.coloud.tacocloudchapter1.repository.spring.data.jdbc.IngredientRepository;
 
 /**
  * 组件扫描 -> 自动装配
