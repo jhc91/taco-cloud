@@ -16,3 +16,15 @@
 ## 使用 Spring JdbcTemplate
 ## 创建 Spring Data JDBC Repository
 ## 使用 Spring Data 声明 JPA Repository
+
+
+
+
+
+
+# 第 4 章 处理非关系型数据
+## 将数据持久化到 Cassandra
+## Cassandra 中的数据建模
+## 在 MongoDB 中使用文档数据
+
+### Cassandra 是一个分布式、高性能、高可用、最终一致、分区行存储的 NoSQL 数据库
